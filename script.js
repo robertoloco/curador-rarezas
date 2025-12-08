@@ -337,6 +337,76 @@ const discoveriesDatabase = [
         url: "https://foldingathome.org/",
         description: "Miles de computadoras trabajando juntas para simular proteínas y curar enfermedades. Colaboración silenciosa.",
         quote: "Los sueños grandes se construyen en silencio distribuido."
+    ,
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Falling Falling",
+        url: "http://www.fallingfalling.com/",
+        description: "Una experiencia visual y auditiva minimalista que te lleva a un viaje infinito hacia no se sabe dónde. Es hipnótico y desconcertante, perfecto para quienes buscan un descanso mental en lo absurdo.",
+        quote: "Deja que la gravedad te lleve a mundos inexplorados."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Furby Organ",
+        url: "https://www.lookmumnocomputer.com/projects-1/furby-organ",
+        description: "Este artista ha convertido a los entrañables Furbys de los años 90 en un órgano musical sinfónico. Explorando la intersección de la nostalgia y el ruido, este proyecto es un espectáculo tanto visual como auditivo.",
+        quote: "La infancia se transforma en música caótica."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "ASMR Programmed Voices",
+        url: "https://www.asmrion.com/",
+        description: "Un proyecto experimental que explora el fenómeno del ASMR a través de voces generadas por IA. Un terreno entre lo humano y lo artificial, buscando provocar respuestas sensoriales únicas.",
+        quote: "El susurro cibernético del presente."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Universal Paperclips",
+        url: "http://www.decisionproblem.com/paperclips/",
+        description: "Comienza como un juego sencillo de fabricación de clips de papel, pero rápidamente te sumerges en una reflexión sobre la inteligencia artificial, la economía y el fin del mundo tal como lo conocemos.",
+        quote: "Todo empieza con un pequeño clip de papel."
+    },
+    {
+        category: "Mundos 'under', subculturas",
+        title: "The SCP Foundation",
+        url: "http://www.scpwiki.com/",
+        description: "Una comunidad colaborativa de escritura que documenta y protege a criaturas, objetos y fenómenos paranormales. Un portal a una realidad alternativa donde lo imposible es cotidiano.",
+        quote: "Protege, contiene y preserva lo inexplicable."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Aesthetic Games",
+        url: "https://gamejolt.com/c/aestheticgames",
+        description: "Una comunidad dedicada a la creación y apreciación de juegos con una fuerte inclinación por la estética vaporwave, glitch y otras corrientes visuales poco convencionales.",
+        quote: "Cuando el arte visual se convierte en juego."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "The Society for the Protection of Unwanted Objects",
+        url: "http://www.spud.org.uk/",
+        description: "Un grupo dedicado a la promoción de objetos que el mundo ha desechado, cuestionando nuestra noción de valor y utilidad en una sociedad consumista.",
+        quote: "Lo que un día fue basura hoy es tesoro."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "Things Magazine",
+        url: "http://www.thingsmagazine.net/",
+        description: "Un blog que explora la historia, las asociaciones y los significados de objetos cotidianos que muchas veces pasan desapercibidos. Un archivo visual y textual que desafía nuestra percepción del mundo material.",
+        quote: "Todo objeto tiene una historia que contar."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Museum of Jurassic Technology",
+        url: "https://www.mjt.org/",
+        description: "Una institución que desafía las convenciones del museo tradicional, exhibiendo artefactos e historias que juegan entre la línea de lo verdadero y lo ficticio. Una exploración del conocimiento y su presentación.",
+        quote: "Donde la naturaleza y la cultura se encuentran en lo asombroso."
+    },
+    {
+        category: "Música experimental",
+        title: "Disquiet Junto",
+        url: "https://disquiet.com/",
+        description: "Un proyecto comunitario de música electrónica experimental que invita a músicos de todo el mundo a crear piezas sonoras inspiradas por indicaciones semanales. Un laboratorio de innovación auditiva.",
+        quote: "La experimentación es la clave de la creación sonora."
     }
 ];
 
