@@ -758,18 +758,8 @@ async function handleNewsletterSubmit(e) {
     msg.textContent = 'Procesando...';
     msg.style.color = '#00f5ff';
     
-    // Construir la URL de Mailchimp para JSONP
-    // IMPORTANTE: Reemplaza estos valores con los tuyos de Mailchimp:
-    // 1. Ve a Mailchimp > Audience > Signup forms > Embedded forms
-    // 2. Copia la URL del action (tiene formato: https://XXXX.usX.list-manage.com/subscribe/post?u=XXX&id=XXX)
-    const MAILCHIMP_URL = ''; // <-- PEGA AQUÍ TU URL DE MAILCHIMP
-    
-    if (!MAILCHIMP_URL) {
-        // Si no hay URL configurada, mostrar mensaje
-        msg.textContent = '⚠️ Configura tu URL de Mailchimp en script.js (línea ~700)';
-        msg.style.color = '#ff006e';
-        return;
-    }
+    // URL de Mailchimp configurada
+    const MAILCHIMP_URL = 'https://gmail.us18.list-manage.com/subscribe/post?u=137e8077998ef7abdc5a01a83&id=95ffc15cc7';
     
     // Convertir POST URL a JSONP URL
     const url = MAILCHIMP_URL.replace('/post?', '/post-json?') + '&EMAIL=' + encodeURIComponent(email) + '&c=mailchimpCallback';
