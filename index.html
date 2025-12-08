@@ -39,10 +39,12 @@
         <div class="newsletter-container">
             <h2 class="newsletter-title">¿Quieres recibir rarezas diarias en tu correo?</h2>
             <p class="newsletter-description">Cada mañana, 6 descubrimientos únicos que nunca volverán a repetirse.</p>
-            <form id="newsletter-form" class="newsletter-form">
+            <!-- Formulario que usa directamente Mailchimp mediante JSONP -->
+            <form id="newsletter-form" class="newsletter-form" action="" method="post" target="_blank">
                 <input
                     type="email"
                     id="email-input"
+                    name="EMAIL"
                     placeholder="tu@email.com"
                     required
                     class="newsletter-input"

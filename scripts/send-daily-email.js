@@ -28,11 +28,44 @@ mailchimp.setConfig({
 function loadDatabase() {
     const scriptPath = path.join(__dirname, '../script.js');
     const content = fs.readFileSync(scriptPath, 'utf-8');
-    const match = content.match(/const discoveriesDatabase = (\[[\s\S]*?\]);/);
-    if (match) {
-        return eval(match[1]);
+    
+    // Extrae el array entre [ y ];
+    const startMarker = 'const discoveriesDatabase = [';
+    const startIndex = content.indexOf(startMarker);
+    if (startIndex === -1) {
+        console.error('No se encontró discoveriesDatabase');
+        return [];
     }
-    return [];
+    
+    // Encuentra el cierre del array
+    let bracketCount = 0;
+    let arrayStart = startIndex + startMarker.length - 1; // Incluye el [
+    let arrayEnd = arrayStart;
+    
+    for (let i = arrayStart; i < content.length; i++) {
+        if (content[i] === '[') bracketCount++;
+        if (content[i] === ']') bracketCount--;
+        if (bracketCount === 0) {
+            arrayEnd = i + 1;
+            break;
+        }
+    }
+    
+    const arrayString = content.substring(arrayStart, arrayEnd);
+    
+    try {
+        // Usa JSON.parse con un wrapper para convertir el código JS a JSON válido
+        const jsonString = arrayString
+            .replace(/\n/g, ' ')
+            .replace(/\s+/g, ' ')
+            .replace(/,\s*}/g, '}')
+            .replace(/,\s*]/g, ']');
+        
+        return JSON.parse(jsonString);
+    } catch (error) {
+        console.error('Error parseando la base de datos:', error.message);
+        return [];
+    }
 }
 
 // Lee el historial de envíos

@@ -748,29 +748,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function handleNewsletterSubmit(e) {
     e.preventDefault();
+    const form = document.getElementById('newsletter-form');
     const input = document.getElementById('email-input');
     const msg = document.getElementById('form-message');
     const email = (input?.value || '').trim();
+    
     if (!email) return;
 
-    msg.textContent = 'Suscribiendo...';
-    try {
-        // Intentar endpoint backend (Vercel/Netlify) → /api/subscribe
-        const res = await fetch('/api/subscribe', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email })
-        });
-        if (res.ok) {
+    msg.textContent = 'Procesando...';
+    msg.style.color = '#00f5ff';
+    
+    // Construir la URL de Mailchimp para JSONP
+    // IMPORTANTE: Reemplaza estos valores con los tuyos de Mailchimp:
+    // 1. Ve a Mailchimp > Audience > Signup forms > Embedded forms
+    // 2. Copia la URL del action (tiene formato: https://XXXX.usX.list-manage.com/subscribe/post?u=XXX&id=XXX)
+    const MAILCHIMP_URL = ''; // <-- PEGA AQUÍ TU URL DE MAILCHIMP
+    
+    if (!MAILCHIMP_URL) {
+        // Si no hay URL configurada, mostrar mensaje
+        msg.textContent = '⚠️ Configura tu URL de Mailchimp en script.js (línea ~700)';
+        msg.style.color = '#ff006e';
+        return;
+    }
+    
+    // Convertir POST URL a JSONP URL
+    const url = MAILCHIMP_URL.replace('/post?', '/post-json?') + '&EMAIL=' + encodeURIComponent(email) + '&c=mailchimpCallback';
+    
+    // Crear callback global
+    window.mailchimpCallback = function(data) {
+        if (data.result === 'success') {
             msg.textContent = '¡Listo! Revisa tu correo para confirmar la suscripción.';
+            msg.style.color = '#00f5ff';
             input.value = '';
         } else {
-            msg.textContent = 'Suscripción simulada en local. Configura Mailchimp para activar el envío diario.';
+            msg.textContent = data.msg || 'Error al suscribir. Inténtalo de nuevo.';
+            msg.style.color = '#ff006e';
         }
-    } catch (err) {
-        console.error(err);
-        msg.textContent = 'Suscripción simulada en local. Configura Mailchimp para activar el envío diario.';
-    }
+        // Limpiar script
+        const script = document.getElementById('mailchimp-script');
+        if (script) script.remove();
+    };
+    
+    // Crear y ejecutar script JSONP
+    const script = document.createElement('script');
+    script.id = 'mailchimp-script';
+    script.src = url;
+    document.body.appendChild(script);
 }
 
 // ============================================
