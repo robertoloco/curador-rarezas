@@ -754,23 +754,40 @@ async function handleNewsletterSubmit(e) {
     
     if (!email) return;
 
-    msg.textContent = 'Procesando...';
+    msg.textContent = 'Redirigiendo a Brevo...';
     msg.style.color = '#00f5ff';
     
-    console.log('Suscribiendo a Brevo:', email);
+    console.log('Redirigiendo a formulario de Brevo:', email);
     
-    // TEMPORAL: Necesitas crear un formulario de suscripción en Brevo
-    // Ve a Brevo → Contacts → Forms → Create a form → Subscription form
-    // Una vez creado, obtén la URL del formulario embebido
+    // Solución temporal: redirigir al formulario de Brevo con el email pre-rellenado
+    // Construir URL de Brevo con email pre-rellenado
+    const brevoUrl = `https://my.brevo.com/public/form/subscribe/simple?listid=3&email=${encodeURIComponent(email)}`;
     
-    msg.textContent = '⚠️ Configuración pendiente. Por favor, crea el formulario de Brevo primero.';
-    msg.style.color = '#ff006e';
-    
-    // INSTRUCCIONES:
-    // 1. Ve a Brevo → Contacts → Forms
-    // 2. Crea un nuevo formulario de suscripción
-    // 3. Obtén la URL del endpoint
-    // 4. Reemplaza el código aquí con el endpoint correcto
+    try {
+        // Abrir en nueva ventana
+        const newWindow = window.open(brevoUrl, '_blank', 'width=600,height=700');
+        
+        if (newWindow) {
+            msg.textContent = '✨ Complete tu suscripción en la nueva ventana que se abrió.';
+            msg.style.color = '#00f5ff';
+            input.value = '';
+            
+            // Mensaje de seguimiento
+            setTimeout(() => {
+                msg.textContent = '👍 Después de suscribirte, recibirás un email de confirmación.';
+            }, 3000);
+        } else {
+            // Si no se puede abrir ventana, redirigir en la misma ventana
+            msg.textContent = '🔗 Redirigiendo...';
+            setTimeout(() => {
+                window.location.href = brevoUrl;
+            }, 1000);
+        }
+    } catch (error) {
+        console.error('Error al redirigir:', error);
+        msg.textContent = 'Error de redirección. Por favor, visita brevo.com para suscribirte.';
+        msg.style.color = '#ff006e';
+    }
 }
 
 // ============================================
