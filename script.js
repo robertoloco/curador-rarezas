@@ -931,6 +931,76 @@ async function fetchFromHackerNews() {
         url: "http://archive.ncsa.illinois.edu/prajlich/forster.html",
         description: "E.M. Forster anticipó nuestra relación con la tecnología en este cuento corto. Una lectura que desafía a repensar nuestra dependencia digital.",
         quote: "Cuando la máquina se detiene, ¿qué queda de nosotros?"
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Staggering Beauty",
+        url: "http://www.staggeringbeauty.com/",
+        description: "Una experiencia visual extraña y perturbadora donde un gusano en blanco y negro responde a tus movimientos del ratón con efectos de luz y sonido sorpresivos.",
+        quote: "El caos no puede ser contenido, solo guiado brevemente."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Anne Marie Grgich",
+        url: "http://www.artbrut.ch/en_GB/author/grgich-anne-marie",
+        description: "Artista autodidacta conocida por sus collages vibrantes y figuras coloridas, construyendo mundos surrealistas llenos de detalles fascinantes.",
+        quote: "La belleza de la imperfección revela mundos ocultos."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "The Quiet Place Project",
+        url: "https://thequietplaceproject.com/thequietplace",
+        description: "Un rincón digital donde el tiempo se detiene. Una invitación para desconectar del ruido de internet y encontrar un momento de calma y reflexión.",
+        quote: "En el silencio, las ideas susurran."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Sort The Court!",
+        url: "https://graebor.itch.io/sort-the-court",
+        description: "Un juego donde, como monarca, decides el destino de tu reino con respuestas simples, revelando lo absurdo y cómico de la política.",
+        quote: "A veces, una simple decisión cambia un reino entero."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "The Flexing Jugaad",
+        url: "https://theflexingjugaad.com/",
+        description: "Celebración de la ingeniería improvisada en India. Las fotos muestran soluciones creativas con objetos cotidianos, revelando ingenio y humor.",
+        quote: "La creatividad es el arte de lo posible con lo que hay."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Digital Ocean",
+        url: "https://wavepot.com/",
+        description: "Un entorno de creación musical basado en código, permitiendo a los músicos experimentar con sonidos en un espacio infinitamente maleable.",
+        quote: "El código es la partitura del futuro."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "HyperNormalisation",
+        url: "https://www.youtube.com/watch?v=fh2cDKyFdyU",
+        description: "Documental que examina cómo el mundo ha sido organizado y simplificado a lo largo del tiempo, desafiando la percepción de la realidad.",
+        quote: "En un mundo de simulacros, la verdad se vuelve extraña."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "The Old New Thing",
+        url: "https://devblogs.microsoft.com/oldnewthing/",
+        description: "Historias del desarrollo de software en Microsoft, una joya escondida llena de anécdotas técnicas y sabiduría geek de tiempos pasados.",
+        quote: "En cada línea de código, una historia por contar."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Maybe",
+        url: "https://www.swide.com/art-culture/art-history/marina-abramovic-and-uly-an-artistic-relationship-that-changed-the-world/",
+        description: "Una exposición única con Marina Abramovic durmiendo en una vitrina en un museo, desafiando las nociones de arte y presencia.",
+        quote: "Cuando el artista es el arte, el espectador deviene parte del cuadro."
+    },
+    {
+        category: "Música experimental",
+        title: "Disquiet Junto",
+        url: "https://disquiet.com/",
+        description: "Una comunidad en línea que explora la música experimental, proponiendo desafíos semanales para compositores y creadores sonoros.",
+        quote: "El sonido es una frontera infinita, esperando ser explorada."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
