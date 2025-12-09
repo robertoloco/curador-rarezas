@@ -47,20 +47,22 @@
                 method="POST"
                 action="https://35e3ed02.sibforms.com/serve/MUIFAALuhNTQennPyojQkG8zjRc1ZVpUjRtAKsrFOhUqwwYMnMR1fPHZ5WoJ_izH6sj4TT2t5PjL7dMINRu4HUWceNx8yh55sbWYP87s1IQD8xwTRgg6ABLgmTH9qn740V5P9s86q7Lqh7jWNBBAOsrEpaP5iQ33IpZ5fycuvQQsh2OTCpOkpp-F2vgKKsFTj7sTor6bW0amUGOLag=="
             >
-                <label for="EMAIL" class="visually-hidden">Introduzca su dirección de e-mail para suscribirse</label>
-                <input
-                    class="newsletter-input"
-                    type="email"
-                    id="EMAIL"
-                    name="EMAIL"
-                    autocomplete="off"
-                    placeholder="tu@email.com"
-                    required
-                >
-                <button type="submit" class="newsletter-btn">
-                    <span class="btn-text">Suscribirme</span>
-                    <span class="btn-icon">→</span>
-                </button>
+                <p class="newsletter-helper">Introduce tu dirección de e-mail para suscribirte:</p>
+                <div class="newsletter-row">
+                    <input
+                        class="newsletter-input"
+                        type="email"
+                        id="EMAIL"
+                        name="EMAIL"
+                        autocomplete="off"
+                        placeholder="tu@email.com"
+                        required
+                    >
+                    <button type="submit" class="newsletter-btn">
+                        <span class="btn-text">Suscribirme</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
 
                 <!-- Campos requeridos por Brevo -->
                 <input type="hidden" name="email_address_check" value="" class="input--hidden">
