@@ -437,6 +437,10 @@ body {
     display: none;
 }
 
+.input--hidden {
+    display: none;
+}
+
 /* ============================================
    NEWSLETTER
    ============================================ */
@@ -460,9 +464,9 @@ body {
 
 .newsletter-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 0.8rem;
-    flex-wrap: wrap;
 }
 
 .newsletter-input {
