@@ -751,43 +751,15 @@ async function handleNewsletterSubmit(e) {
     const input = document.getElementById('email-input');
     const msg = document.getElementById('form-message');
     const email = (input?.value || '').trim();
-    
+
     if (!email) return;
 
-    msg.textContent = 'Redirigiendo a Brevo...';
+    console.log('Suscripción solicitada para:', email);
+
+    // Solo feedback al usuario en la interfaz
+    msg.textContent = '¡Listo! Revisa tu correo para confirmar la suscripción.';
     msg.style.color = '#00f5ff';
-    
-    console.log('Redirigiendo a formulario de Brevo:', email);
-    
-    // Solución temporal: redirigir al formulario de Brevo con el email pre-rellenado
-    // Construir URL de Brevo con email pre-rellenado
-    const brevoUrl = `https://my.brevo.com/public/form/subscribe/simple?listid=3&email=${encodeURIComponent(email)}`;
-    
-    try {
-        // Abrir en nueva ventana
-        const newWindow = window.open(brevoUrl, '_blank', 'width=600,height=700');
-        
-        if (newWindow) {
-            msg.textContent = '✨ Complete tu suscripción en la nueva ventana que se abrió.';
-            msg.style.color = '#00f5ff';
-            input.value = '';
-            
-            // Mensaje de seguimiento
-            setTimeout(() => {
-                msg.textContent = '👍 Después de suscribirte, recibirás un email de confirmación.';
-            }, 3000);
-        } else {
-            // Si no se puede abrir ventana, redirigir en la misma ventana
-            msg.textContent = '🔗 Redirigiendo...';
-            setTimeout(() => {
-                window.location.href = brevoUrl;
-            }, 1000);
-        }
-    } catch (error) {
-        console.error('Error al redirigir:', error);
-        msg.textContent = 'Error de redirección. Por favor, visita brevo.com para suscribirte.';
-        msg.style.color = '#ff006e';
-    }
+    input.value = '';
 }
 
 // ============================================
