@@ -1,16 +1,14 @@
 // ============================================
-// SCRIPT: Envía email diario con Mailchimp
+// SCRIPT: Envía email diario con Brevo
 // Ejecutar automáticamente cada día con GitHub Actions
 // ============================================
 
 // REQUISITOS:
-// - npm install @mailchimp/mailchimp_transactional
+// - npm install @getbrevo/brevo
 // - Variables de entorno:
-//   * MAILCHIMP_API_KEY
-//   * MAILCHIMP_AUDIENCE_ID
-//   * MAILCHIMP_SERVER_PREFIX
+//   * BREVO_API_KEY
 
-import mailchimp from '@mailchimp/mailchimp_marketing';
+import * as brevo from '@getbrevo/brevo';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -18,11 +16,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Configuración de Mailchimp
-mailchimp.setConfig({
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: process.env.MAILCHIMP_SERVER_PREFIX,
-});
+// Configuración de Brevo
+const apiInstance = new brevo.TransactionalEmailsApi();
+apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 
 // Lee la base de datos
 function loadDatabase() {
@@ -181,43 +177,57 @@ function generateEmailHTML(discoveries) {
     `;
 }
 
-// Envía campaña a través de Mailchimp
+// Obtener todos los contactos de la lista
+async function getContactsFromList() {
+    const contactsApi = new brevo.ContactsApi();
+    contactsApi.setApiKey(brevo.ContactsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
+    
+    try {
+        const opts = {
+            limit: 1000,
+            offset: 0
+        };
+        const data = await contactsApi.getContacts(opts);
+        return data.body.contacts.map(c => c.email);
+    } catch (error) {
+        console.error('❌ Error obteniendo contactos:', error);
+        return [];
+    }
+}
+
+// Envía campaña a través de Brevo
 async function sendCampaign(discoveries) {
     const today = new Date().toISOString().split('T')[0];
     
     try {
-        // 1. Crea la campaña
-        const campaign = await mailchimp.campaigns.create({
-            type: 'regular',
-            recipients: {
-                list_id: process.env.MAILCHIMP_AUDIENCE_ID,
-            },
-            settings: {
-                subject_line: `🎨 Rarezas del ${today} — Descubrimientos únicos`,
-                preview_text: 'Tus 6 rarezas diarias que nunca volverán a repetirse',
-                title: `Rarezas Diarias ${today}`,
-                from_name: 'Curador de Rarezas',
-                reply_to: 'noreply@tudominio.com',
-            },
-        });
-
-        console.log(`📧 Campaña creada: ${campaign.id}`);
-
-        // 2. Añade contenido HTML
-        await mailchimp.campaigns.setContent(campaign.id, {
-            html: generateEmailHTML(discoveries),
-        });
-
-        console.log('✍️  Contenido añadido');
-
-        // 3. Envía la campaña
-        await mailchimp.campaigns.send(campaign.id);
-
-        console.log('✅ Email enviado exitosamente!');
+        // 1. Obtener todos los contactos
+        console.log('Obteniendo contactos...');
+        const contacts = await getContactsFromList();
+        console.log(`👥 Total contactos: ${contacts.length}`);
         
+        if (contacts.length === 0) {
+            console.log('⚠️  No hay contactos para enviar');
+            return false;
+        }
+        
+        // 2. Preparar email
+        const sendSmtpEmail = new brevo.SendSmtpEmail();
+        sendSmtpEmail.subject = `🎨 Rarezas del ${today} — Descubrimientos únicos`;
+        sendSmtpEmail.htmlContent = generateEmailHTML(discoveries);
+        sendSmtpEmail.sender = { name: 'Curador de Rarezas', email: 'noreply@robertoloco.com' };
+        sendSmtpEmail.to = contacts.map(email => ({ email }));
+        
+        // 3. Enviar email
+        console.log('📧 Enviando emails...');
+        await apiInstance.sendTransacEmail(sendSmtpEmail);
+        
+        console.log('✅ Emails enviados exitosamente!');
         return true;
     } catch (error) {
         console.error('❌ Error al enviar campaña:', error);
+        if (error.response) {
+            console.error('Detalles:', error.response.body);
+        }
         throw error;
     }
 }

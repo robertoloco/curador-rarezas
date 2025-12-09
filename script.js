@@ -748,7 +748,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function handleNewsletterSubmit(e) {
     e.preventDefault();
-    const form = document.getElementById('newsletter-form');
     const input = document.getElementById('email-input');
     const msg = document.getElementById('form-message');
     const email = (input?.value || '').trim();
@@ -758,56 +757,20 @@ async function handleNewsletterSubmit(e) {
     msg.textContent = 'Procesando...';
     msg.style.color = '#00f5ff';
     
-    // URL completa de Mailchimp con todos los parámetros
-    const MAILCHIMP_URL = 'https://gmail.us18.list-manage.com/subscribe/post?u=137e8077998ef7abdc5a01a83&id=95ffc15cc7&f_id=00e6aae6f0';
+    console.log('Suscribiendo a Brevo:', email);
     
-    // Convertir POST URL a JSONP URL y agregar email
-    const url = MAILCHIMP_URL.replace('/post?', '/post-json?') + '&EMAIL=' + encodeURIComponent(email) + '&c=mailchimpCallback';
+    // TEMPORAL: Necesitas crear un formulario de suscripción en Brevo
+    // Ve a Brevo → Contacts → Forms → Create a form → Subscription form
+    // Una vez creado, obtén la URL del formulario embebido
     
-    console.log('Suscribiendo a:', email);
-    console.log('URL:', url);
+    msg.textContent = '⚠️ Configuración pendiente. Por favor, crea el formulario de Brevo primero.';
+    msg.style.color = '#ff006e';
     
-    // Crear callback global
-    window.mailchimpCallback = function(data) {
-        console.log('Respuesta de Mailchimp:', data);
-        
-        if (data.result === 'success') {
-            msg.textContent = '¡Listo! Revisa tu correo para confirmar la suscripción.';
-            msg.style.color = '#00f5ff';
-            input.value = '';
-        } else {
-            // Mostrar el mensaje exacto de error de Mailchimp
-            const errorMsg = data.msg ? data.msg.replace(/<[^>]*>/g, '') : 'Error al suscribir. Inténtalo de nuevo.';
-            msg.textContent = errorMsg;
-            msg.style.color = '#ff006e';
-            console.error('Error de Mailchimp:', data);
-        }
-        
-        // Limpiar script
-        const script = document.getElementById('mailchimp-script');
-        if (script) script.remove();
-    };
-    
-    // Timeout por si no responde
-    setTimeout(() => {
-        if (msg.textContent === 'Procesando...') {
-            msg.textContent = 'Tiempo de espera agotado. Verifica tu conexión.';
-            msg.style.color = '#ff006e';
-            const script = document.getElementById('mailchimp-script');
-            if (script) script.remove();
-        }
-    }, 10000);
-    
-    // Crear y ejecutar script JSONP
-    const script = document.createElement('script');
-    script.id = 'mailchimp-script';
-    script.src = url;
-    script.onerror = function() {
-        msg.textContent = 'Error de conexión. Inténtalo de nuevo.';
-        msg.style.color = '#ff006e';
-        console.error('Error cargando script de Mailchimp');
-    };
-    document.body.appendChild(script);
+    // INSTRUCCIONES:
+    // 1. Ve a Brevo → Contacts → Forms
+    // 2. Crea un nuevo formulario de suscripción
+    // 3. Obtén la URL del endpoint
+    // 4. Reemplaza el código aquí con el endpoint correcto
 }
 
 // ============================================

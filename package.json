@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "openai": "^4.20.0",
-    "@mailchimp/mailchimp_marketing": "^3.0.80"
+    "@getbrevo/brevo": "^2.2.0"
   },
   "keywords": [
     "newsletter",

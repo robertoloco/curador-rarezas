@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install openai
-          npm install @mailchimp/mailchimp_marketing
+          npm install @getbrevo/brevo
       
       # 4. Actualiza base de datos con IA
       - name: Update database with AI
@@ -50,9 +50,7 @@ jobs:
       # 6. Envía newsletter diario
       - name: Send daily newsletter
         env:
-          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-          MAILCHIMP_AUDIENCE_ID: ${{ secrets.MAILCHIMP_AUDIENCE_ID }}
-          MAILCHIMP_SERVER_PREFIX: ${{ secrets.MAILCHIMP_SERVER_PREFIX }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: node scripts/send-daily-email.js
       
       # 7. Guarda historial de emails
