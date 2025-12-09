@@ -734,7 +734,50 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Carga descubrimientos del día (persisten aunque recargues)
     loadDailyDiscoveries();
+
+    // Configura el formulario de Brevo (suscripción sin recargar página)
+    setupBrevoForm();
 });
+
+// ============================================
+// NEWSLETTER: Suscripción con Brevo (frontend)
+// ============================================
+
+function setupBrevoForm() {
+    const form = document.getElementById('sib-form');
+    const msg = document.getElementById('form-message');
+    if (!form || !msg) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const emailInput = document.getElementById('EMAIL');
+        const email = (emailInput?.value || '').trim();
+        if (!email) return;
+
+        msg.textContent = 'Enviando suscripción...';
+        msg.style.color = '#8aa';
+
+        const formData = new FormData(form);
+
+        try {
+            // No podemos leer la respuesta de Brevo por CORS, así que asumimos éxito
+            await fetch(form.action, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData,
+            });
+
+            msg.textContent = '¡Listo! Revisa tu correo para confirmar la suscripción. Si ya estabas suscrito, no recibirás correos duplicados.';
+            msg.style.color = '#00f5ff';
+            form.reset();
+        } catch (error) {
+            console.error('Error enviando suscripción a Brevo:', error);
+            msg.textContent = 'Ha habido un problema al suscribirte. Inténtalo de nuevo en unos minutos.';
+            msg.style.color = '#ff006e';
+        }
+    });
+}
 
 // ============================================
 // INTEGRACIÓN CON APIs REALES (OPCIONAL)
