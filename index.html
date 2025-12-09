@@ -39,21 +39,22 @@
         <div class="newsletter-container">
             <h2 class="newsletter-title">¿Quieres recibir rarezas diarias en tu correo?</h2>
             <p class="newsletter-description">Cada mañana, 6 descubrimientos únicos que nunca volverán a repetirse.</p>
-            <!-- Formulario que usa directamente Mailchimp mediante JSONP -->
-            <form id="newsletter-form" class="newsletter-form" action="" method="post" target="_blank">
-                <input
-                    type="email"
-                    id="email-input"
-                    name="EMAIL"
-                    placeholder="tu@email.com"
-                    required
-                    class="newsletter-input"
+            <!--
+              Suscripción sin backend:
+              Este botón abre el formulario/página de suscripción de Brevo.
+              Reemplaza `TU_URL_DE_FORMULARIO_BREVO` por la URL pública de tu formulario en Brevo.
+            -->
+            <div class="newsletter-form">
+                <a
+                    href="https://TU_URL_DE_FORMULARIO_BREVO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="newsletter-btn"
                 >
-                <button type="submit" class="newsletter-btn">
                     <span class="btn-text">Suscribirme</span>
                     <span class="btn-icon">→</span>
-                </button>
-            </form>
+                </a>
+            </div>
             <p id="form-message" class="form-message"></p>
         </div>
     </main>

@@ -8,14 +8,11 @@
 # La web funciona sin configuración adicional
 ```
 
-### 2️⃣ **Configurar Mailchimp (10 minutos)**
+### 2️⃣ **Configurar Brevo (10 minutos)**
 
-1. Crea cuenta en [Mailchimp](https://mailchimp.com) (gratis)
-2. Crea una "Audience" (lista)
-3. Obtén:
-   - **API Key**: Account → Settings → Extras → API keys
-   - **Audience ID**: Audience → Settings → Audience name
-   - **Server Prefix**: Lo ves en tu API key (`xxx-us21` → `us21`)
+1. Crea cuenta en Brevo (antes Sendinblue)
+2. Crea una API Key v3 (empieza por `xkeysib-`)
+3. Configura `BREVO_API_KEY` como secret en GitHub Actions y/o en tu `.env`
 
 ### 3️⃣ **Configurar OpenAI (5 minutos)**
 
@@ -43,11 +40,9 @@ git push -u origin main
 # Settings → Secrets and variables → Actions → New secret
 ```
 
-**Secrets a añadir:**
-- `OPENAI_API_KEY` = tu-api-key-de-openai
-- `MAILCHIMP_API_KEY` = tu-api-key-de-mailchimp
-- `MAILCHIMP_AUDIENCE_ID` = tu-audience-id
-- `MAILCHIMP_SERVER_PREFIX` = us21 (o el tuyo)
+**Secrets a añadir (mínimo):**
+- `BREVO_API_KEY` = tu API key v3 de Brevo
+- (Opcional) `OPENAI_API_KEY` = tu API key de OpenAI, si quieres que la IA actualice la BD
 
 ### 5️⃣ **Verificar Automatización**
 
@@ -95,18 +90,14 @@ npm run daily
 
 **Windows (PowerShell):**
 ```powershell
-$env:OPENAI_API_KEY="sk-xxx"
-$env:MAILCHIMP_API_KEY="xxx-us21"
-$env:MAILCHIMP_AUDIENCE_ID="xxx"
-$env:MAILCHIMP_SERVER_PREFIX="us21"
+$env:BREVO_API_KEY="xkeysib-xxx"
+$env:OPENAI_API_KEY="sk-xxx"  # opcional
 ```
 
 **Mac/Linux:**
 ```bash
-export OPENAI_API_KEY="sk-xxx"
-export MAILCHIMP_API_KEY="xxx-us21"
-export MAILCHIMP_AUDIENCE_ID="xxx"
-export MAILCHIMP_SERVER_PREFIX="us21"
+export BREVO_API_KEY="xkeysib-xxx"
+export OPENAI_API_KEY="sk-xxx"  # opcional
 ```
 
 O crea un archivo `.env` (no lo subas a Git):
@@ -122,11 +113,8 @@ cp .env.example .env
 ### "Error: OPENAI_API_KEY not found"
 → Configura la variable de entorno o el Secret en GitHub
 
-### "Mailchimp API error"
-→ Verifica que tu API key sea correcta y el server prefix coincida
-
 ### "No se envían emails"
-→ Verifica que tengas suscriptores confirmados en tu Audience
+→ Verifica que tengas contactos dados de alta en Brevo
 
 ### "GitHub Actions no se ejecuta"
 → Ve a Actions → Enable workflows (si está deshabilitado)
@@ -136,14 +124,13 @@ cp .env.example .env
 
 ---
 
-## 📊 Costos Mensuales
+## 📊 Costos Mensuales (orientativos)
 
-- **Mailchimp**: $0 (hasta 500 suscriptores)
-- **OpenAI**: ~$1/mes (actualización diaria)
+- **Brevo**: plan gratuito hasta cierto volumen de emails/contactos (revisa condiciones actuales)
+- **OpenAI**: ~$1/mes (si activas la actualización diaria con IA)
 - **GitHub Pages**: $0
-- **Hosting Vercel/Netlify**: $0
 
-**Total: ~$1/mes** 🎉
+**Total aproximado: ~ $1/mes si usas IA + envíos básicos con Brevo** 🎉
 
 ---
 
@@ -162,7 +149,7 @@ Si algo no funciona:
 
 1. **Lee los logs** en GitHub Actions
 2. **Verifica variables** de entorno
-3. **Comprueba credenciales** de Mailchimp/OpenAI
+3. **Comprueba credenciales** de Brevo/OpenAI
 4. **Revisa README.md** completo
 
 ---

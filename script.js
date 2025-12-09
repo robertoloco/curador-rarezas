@@ -734,33 +734,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Carga descubrimientos del día (persisten aunque recargues)
     loadDailyDiscoveries();
-
-    // Suscripción al newsletter (Mailchimp vía backend opcional)
-    const form = document.getElementById('newsletter-form');
-    if (form) {
-        form.addEventListener('submit', handleNewsletterSubmit);
-    }
 });
-
-// ============================================
-// NEWSLETTER: Suscripción (frontend) y helpers
-// ============================================
-
-async function handleNewsletterSubmit(e) {
-    e.preventDefault();
-    const input = document.getElementById('email-input');
-    const msg = document.getElementById('form-message');
-    const email = (input?.value || '').trim();
-
-    if (!email) return;
-
-    console.log('Suscripción solicitada para:', email);
-
-    // Solo feedback al usuario en la interfaz
-    msg.textContent = '¡Listo! Revisa tu correo para confirmar la suscripción.';
-    msg.style.color = '#00f5ff';
-    input.value = '';
-}
 
 // ============================================
 // INTEGRACIÓN CON APIs REALES (OPCIONAL)

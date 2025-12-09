@@ -17,49 +17,33 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuración de Brevo
+// Usamos los mismos tipos que recomienda la documentación oficial
 const apiInstance = new brevo.TransactionalEmailsApi();
 apiInstance.setApiKey(brevo.TransactionalEmailsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
 
-// Lee la base de datos
+// Lee la base de datos desde script.js reutilizando la misma lógica que update-database.js
 function loadDatabase() {
     const scriptPath = path.join(__dirname, '../script.js');
     const content = fs.readFileSync(scriptPath, 'utf-8');
-    
-    // Extrae el array entre [ y ];
-    const startMarker = 'const discoveriesDatabase = [';
-    const startIndex = content.indexOf(startMarker);
-    if (startIndex === -1) {
-        console.error('No se encontró discoveriesDatabase');
+
+    // Extrae el array completo "const discoveriesDatabase = [...]" y lo evalúa como JS
+    const match = content.match(/const discoveriesDatabase = (\[[\s\S]*?\]);/);
+    if (!match) {
+        console.error('No se encontró discoveriesDatabase en script.js');
         return [];
     }
-    
-    // Encuentra el cierre del array
-    let bracketCount = 0;
-    let arrayStart = startIndex + startMarker.length - 1; // Incluye el [
-    let arrayEnd = arrayStart;
-    
-    for (let i = arrayStart; i < content.length; i++) {
-        if (content[i] === '[') bracketCount++;
-        if (content[i] === ']') bracketCount--;
-        if (bracketCount === 0) {
-            arrayEnd = i + 1;
-            break;
-        }
-    }
-    
-    const arrayString = content.substring(arrayStart, arrayEnd);
-    
+
     try {
-        // Usa JSON.parse con un wrapper para convertir el código JS a JSON válido
-        const jsonString = arrayString
-            .replace(/\n/g, ' ')
-            .replace(/\s+/g, ' ')
-            .replace(/,\s*}/g, '}')
-            .replace(/,\s*]/g, ']');
-        
-        return JSON.parse(jsonString);
+        // match[1] es el literal de array JS, lo evaluamos directamente
+        // (igual que en scripts/update-database.js)
+        const dbArray = eval(match[1]);
+        if (!Array.isArray(dbArray)) {
+            console.error('discoveriesDatabase no es un array válido');
+            return [];
+        }
+        return dbArray;
     } catch (error) {
-        console.error('Error parseando la base de datos:', error.message);
+        console.error('Error evaluando discoveriesDatabase:', error.message);
         return [];
     }
 }
@@ -168,7 +152,7 @@ function generateEmailHTML(discoveries) {
                 Estos descubrimientos nunca volverán a repetirse.
             </p>
             <p style="color: #666; font-size: 11px;">
-                <a href="*|UNSUB|*" style="color: #00f5ff; text-decoration: none;">Desuscribirse</a>
+                <a href="{{unsubscribe}}" style="color: #00f5ff; text-decoration: none;">Desuscribirse</a>
             </p>
         </div>
     </div>

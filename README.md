@@ -7,7 +7,7 @@ Una experiencia web que descubre y presenta contenido fascinante y extraño de i
 - **Descubrimientos Diarios**: 6 rarezas curadas cada día
 - **Sin Repeticiones**: Los descubrimientos diarios NUNCA se repiten en el tiempo
 - **Misma Selección Todo el Día**: Aunque recargues, verás los mismos 6 del día
-- **Newsletter Automático**: Suscripción con Mailchimp y envío diario
+- **Newsletter Automático**: Suscripción y envío diario con **Brevo** (sin backend propio, usando GitHub Actions)
 - **Actualización con IA**: OpenAI busca y añade nuevos descubrimientos automáticamente
 - **Categorías Diversas**: Webs extrañas, artistas marginales, proyectos experimentales, net.art, subculturas, y más
 - **Estética Única**: Diseño glitch/vaporwave con animaciones suaves
@@ -21,7 +21,7 @@ newsletter random/
 ├── script.js                       # Lógica, BD y funcionalidad (sin repetición)
 ├── package.json                    # Dependencias Node.js
 ├── api/
-│   └── subscribe.js                # API serverless para Mailchimp
+│   └── subscribe.js                # (Opcional) API serverless para Mailchimp si alguna vez lo usas con Vercel/Netlify
 ├── scripts/
 │   ├── update-database.js          # Script IA: actualiza BD diariamente
 │   ├── send-daily-email.js         # Script: envía newsletter diario
@@ -38,16 +38,18 @@ newsletter random/
 
 1. Abre `index.html` directamente en tu navegador
 2. ¡Listo! La web funciona sin servidor
-3. La suscripción mostrará mensaje simulado (necesitas configurar Mailchimp)
+3. El botón de suscripción abre el formulario de Brevo (configura tu URL en `index.html`)
 
 ### Opción 2: Publicar Online con Newsletter Completo
 
-#### A) Vercel (Recomendado para APIs)
+#### A) Vercel (Recomendado para APIs, opcional)
+
+> Nota: Para GitHub Pages no necesitas Vercel ni ningún backend. Esta opción solo aplica si en el futuro quieres montar una API propia.
 
 1. Crea cuenta en [Vercel](https://vercel.com)
 2. Instala Vercel CLI: `npm i -g vercel`
-3. Desde la carpeta: `vercel`
-4. Configura variables de entorno (ver sección Mailchimp)
+3. Desde la carpeta del proyecto: `vercel`
+4. Configura variables de entorno según el proveedor de emails que quieras usar (Mailchimp o Brevo)
 5. ¡Publicado con API de suscripción funcional!
 
 #### B) GitHub Pages + GitHub Actions (Gratis, Automatizado)
@@ -59,10 +61,8 @@ newsletter random/
 3. Sube TODOS los archivos del proyecto
 4. Ve a Settings → Pages → Selecciona rama `main`
 5. Configura Secrets (Settings → Secrets and variables → Actions):
-   - `OPENAI_API_KEY`
-   - `MAILCHIMP_API_KEY`
-   - `MAILCHIMP_AUDIENCE_ID`
-   - `MAILCHIMP_SERVER_PREFIX`
+   - `OPENAI_API_KEY` (para la parte de IA, opcional)
+   - `BREVO_API_KEY` (para enviar el newsletter diario con Brevo)
 6. La web estará en: `https://tu-usuario.github.io/curador-rarezas`
 7. GitHub Actions ejecutará automáticamente cada día
 
@@ -76,48 +76,37 @@ newsletter random/
 
 ---
 
-## 📧 Configurar Mailchimp (Newsletter Automático)
+## 📧 Configurar Brevo (Newsletter)
 
-### Paso 1: Crear Cuenta en Mailchimp
+Por defecto, este proyecto usa **Brevo** tanto para la suscripción (formulario externo) como para el envío diario automatizado.
+
+### Paso 1: Crear Cuenta y API Key en Brevo
+
+1. Ve a Brevo (antes Sendinblue) y crea una cuenta
+2. Entra en la sección de claves de API y crea una **API v3**
+3. Copia el valor (empieza por `xkeysib-...`)
 
 1. Ve a [Mailchimp](https://mailchimp.com) y crea cuenta gratuita (hasta 500 suscriptores)
 2. Verifica tu email
 3. Crea una "Audience" (lista de contactos)
 
-### Paso 2: Obtener Credenciales
-
-**API Key:**
-1. Ve a Account → Settings → Extras → API keys
-2. Crea nueva API key
-3. Copia y guárdala (no se volverá a mostrar)
-
-**Audience ID:**
-1. Ve a Audience → Settings → Audience name and defaults
-2. Copia el "Audience ID" (código alfanumérico)
-
-**Server Prefix:**
-1. Mira tu API key, tiene formato: `XXXXXXXXXXXX-us21`
-2. El server prefix es la parte final: `us21` (o us1, us2, etc.)
-
-### Paso 3: Configurar Variables de Entorno
-
-**En Vercel/Netlify:**
-- Ve a Settings → Environment Variables
-- Añade:
-  - `MAILCHIMP_API_KEY` = tu-api-key
-  - `MAILCHIMP_AUDIENCE_ID` = tu-audience-id
-  - `MAILCHIMP_SERVER_PREFIX` = us21 (o el tuyo)
+### Paso 2: Configurar Variables de Entorno
 
 **En GitHub (para Actions):**
 - Settings → Secrets and variables → Actions → New repository secret
-- Añade las mismas 3 variables
-- **IMPORTANTE:** También añade `OPENAI_API_KEY` (ver siguiente sección)
+- Añade:
+  - `BREVO_API_KEY` = tu clave v3 de Brevo
+  - (Opcional) `OPENAI_API_KEY` si quieres que la IA actualice la base de datos automáticamente
 
-### Paso 4: Probar Suscripción
-1. Abre tu web publicada
-2. Introduce tu email en el formulario
-3. Revisa tu email para confirmar (double opt-in)
-4. ¡Listo!
+**En local (para pruebas):**
+- Crea un archivo `.env` copiando de `.env.example` y rellena `BREVO_API_KEY`
+- O exporta la variable directamente (PowerShell/Bash) como se indica más abajo
+
+### Paso 3: Configurar el Formulario de Suscripción
+
+1. En Brevo, crea un formulario o página de suscripción
+2. Copia la **URL pública** del formulario
+3. Edita `index.html` y reemplaza `https://TU_URL_DE_FORMULARIO_BREVO` por esa URL
 
 ---
 
@@ -171,8 +160,18 @@ Esto añadirá 10 nuevos descubrimientos a `script.js`.
 - Las añade a `script.js`
 - Hace commit automático
 - Selecciona 6 para el día (sin repetir)
-- Envía email a suscriptores
+- Envía email a suscriptores (usando Brevo)
 - Guarda historial para no repetir
+
+---
+
+## 📨 Detalles del envío diario con Brevo
+
+El script `scripts/send-daily-email.js` hace:
+- Llama a la API de contactos de Brevo (`ContactsApi.getContacts`)
+- Envía el email diario a todos los contactos que encuentre
+
+Por tanto, asegúrate de que tus suscriptores están dados de alta como **Contactos** en tu cuenta de Brevo (puedes importarlos desde CSV u otros proveedores).
 
 ---
 
@@ -340,10 +339,7 @@ Usa servicios como:
 
 ### 5. Newsletter Real
 
-Integra con:
-- **Mailchimp**: Envío de newsletters
-- **ConvertKit**: Para creadores
-- **Buttondown**: Simple y minimalista
+Este proyecto ya viene con integración lista para **Brevo** (envío diario automatizado). Si lo prefieres, podrías adaptar el flujo a otros proveedores (Mailchimp, ConvertKit, Buttondown, etc.), pero no es necesario.
 
 ### 6. PWA (Progressive Web App)
 
