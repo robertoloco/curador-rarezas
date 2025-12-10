@@ -1040,6 +1040,76 @@ async function fetchFromHackerNews() {
         url: "https://www.humanetech.com/",
         description: "Un movimiento que busca rediseñar la tecnología poniendo en el centro el bienestar humano, cuestionando la naturaleza de nuestras interacciones digitales.",
         quote: "La verdadera innovación está en humanizar la tecnología."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Bored Button",
+        url: "https://www.boredbutton.com/",
+        description: "Un botón que te lleva a una serie de webs aleatorias diseñadas para combatir el aburrimiento. Una puerta a lo insólito que no sabías que necesitabas.",
+        quote: "En la era del exceso de información, el tedio es un tesoro."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Shintaro Kago",
+        url: "https://sakaisei.com/tag/shintaro-kago/",
+        description: "Artista japonés del manga ero guro, mezcla de grotesco y erotismo. Sus ilustraciones muestran el lado más oscuro y surrealista de la mente humana.",
+        quote: "La belleza emerge de la deformidad interior."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "This Is Sand",
+        url: "https://thisissand.com/",
+        description: "Una canvas digital donde puedes crear paisajes con arena virtual. La simplicidad se encuentra con la meditación en un collage de colores brillantes.",
+        quote: "Cada grano cuenta una historia en el desierto de lo digital."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Neko Atsume",
+        url: "http://www.nekoatsume.com/",
+        description: "Un juego para coleccionar gatos en tu patio virtual. Simple, fascinante y sutilmente adictivo para los amantes de los felinos.",
+        quote: "El arte de la paciencia se aprende esperando un visitante peludo."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "Cypherpunks Mailing List",
+        url: "http://cypherpunks.venona.com/date/",
+        description: "El archivo de una lista de correos donde visionarios discutieron sobre criptografía y la privacidad en Internet. Un vistazo al nacimiento de la libertad digital.",
+        quote: "El futuro de la privacidad fue redactado en códigos y correo."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Cyberpunk Forum",
+        url: "https://cyberpunkforums.com/",
+        description: "Un refugio para aquellos interesados en la estética y las ideas del cyberpunk. Aquí la tecnología y el arte se fusionan en un caleidoscopio distópico.",
+        quote: "La distopía es el sueño del insomnio tecnológico."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "The Last Message Received",
+        url: "https://thelastmessagereceived.tumblr.com/",
+        description: "Una colección de mensajes finales enviados por personas que se han ido. Un recordatorio del poder emocional de las palabras que pronunciamos.",
+        quote: "Cada despedida es una pequeña eternidad encapsulada."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "PostSecret",
+        url: "https://postsecret.com/",
+        description: "Un blog donde los usuarios envían secretos anonimamente en forma de postales. La vida privada hecha arte colectivo.",
+        quote: "Todos guardamos un mar de secretos en el silencio del corazón."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "On Kawara - One Million Years",
+        url: "https://www.tate.org.uk/art/artworks/kawara-one-million-years-p13097",
+        description: "Una obra que lista cada año desde hace un millón hasta dentro de un millón de años. Una exploración del tiempo que transforma la historia en mantra.",
+        quote: "El tiempo no corre, nos transforma."
+    },
+    {
+        category: "Música experimental",
+        title: "The Conet Project",
+        url: "http://www.irdial.com/conet.htm",
+        description: "Grabaciones de números estaciones de onda corta, posiblemente usadas para mensajes de espionaje. La inquietante melodía de lo desconocido.",
+        quote: "En el aire, las cifras son los susurros de lo invisible."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
