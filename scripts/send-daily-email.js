@@ -167,11 +167,11 @@ async function getContactsFromList() {
     contactsApi.setApiKey(brevo.ContactsApiApiKeys.apiKey, process.env.BREVO_API_KEY);
     
     try {
-        const opts = {
-            limit: 1000,
-            offset: 0
-        };
-        const data = await contactsApi.getContacts(opts);
+        // La API de Brevo espera los parámetros como argumentos sueltos (limit, offset),
+        // no como objeto. El uso incorrecto generaba un 400 "Limit is invalid".
+        const limit = 1000;
+        const offset = 0;
+        const data = await contactsApi.getContacts(limit, offset);
         return data.body.contacts.map(c => c.email);
     } catch (error) {
         console.error('❌ Error obteniendo contactos:', error);
