@@ -198,7 +198,8 @@ async function sendCampaign(discoveries) {
         const sendSmtpEmail = new brevo.SendSmtpEmail();
         sendSmtpEmail.subject = `🎨 Rarezas del ${today} — Descubrimientos únicos`;
         sendSmtpEmail.htmlContent = generateEmailHTML(discoveries);
-        sendSmtpEmail.sender = { name: 'Curador de Rarezas', email: 'noreply@robertoloco.com' };
+        // Usa un remitente verificado en Brevo (por ahora, Gmail personal)
+        sendSmtpEmail.sender = { name: 'Curador de Rarezas', email: 'robertoalmela300@gmail.com' };
         sendSmtpEmail.to = contacts.map(email => ({ email }));
         
         // 3. Enviar email
