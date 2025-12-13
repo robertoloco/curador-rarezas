@@ -1426,6 +1426,76 @@ async function fetchFromHackerNews() {
         url: "https://www.bbc.co.uk/programmes/articles/4LT8Lr8w4m3n8LtqNF04mCz/the-radiophonic-workshop",
         description: "Revive el legado de un colectivo pionero de la BBC, que revolucionó la música experimental y los efectos de sonido en la radio y televisión del siglo XX.",
         quote: "El sonido es la materia prima de la imaginación."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Patatap",
+        url: "https://patatap.com/",
+        description: "Un sitio interactivo que convierte tu teclado en una máquina de sonidos y animaciones hipnóticas. Cada tecla es una sorpresa visual y auditiva.",
+        quote: "¿Cuántos mundos hay en un teclado?"
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Tim Bavington",
+        url: "http://www.timbavington.com/",
+        description: "Este artista transforma la música en color con un enfoque sinestésico único. Cada obra es una interpretación visual de una canción.",
+        quote: "Deja que la música pinte tus sueños."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "The Museum of Broken Relationships",
+        url: "https://brokenships.com/",
+        description: "Una colección de objetos cotidianos que cuentan historias de amor perdido, cada pieza es un testimonio de la fragilidad humana.",
+        quote: "En las ruinas del amor, encontramos la belleza."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "QWOP",
+        url: "http://www.foddy.net/Athletics.html",
+        description: "Un juego absurdamente difícil donde controlas un corredor con las teclas QWOP de tu teclado. La física extraña hace de este juego un reto hilarante.",
+        quote: "Fracasar nunca fue tan entretenido."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "SpaceHey",
+        url: "https://spacehey.com/",
+        description: "Una red social nostálgica que revive la estética y la comunidad de MySpace. Un viaje al internet de principios de los 2000.",
+        quote: "Viajemos al pasado digital, un post a la vez."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Cave of Forgotten Dreams",
+        url: "https://www.documentarytube.com/videos/cave-of-forgotten-dreams",
+        description: "Un documental de Werner Herzog sobre las cuevas de Chauvet, cuyos secretos y arte rupestre antiguo desafían la comprensión del tiempo y el arte.",
+        quote: "El arte es el eco de la eternidad."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "Unconsumption",
+        url: "http://unconsumption.tumblr.com/",
+        description: "Un blog que reimagina el consumo como una actividad consciente, proponiendo formas de reutilizar y repensar nuestros hábitos de compra.",
+        quote: "Porque poseer menos es poseer más."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "PostSecret",
+        url: "https://postsecret.com/",
+        description: "Un espacio donde personas anónimas envían sus más profundos secretos en forma de postales. Una ventana al alma humana.",
+        quote: "Los secretos unen lo que el silencio separa."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "ŠKART",
+        url: "https://skart.rs/",
+        description: "Un colectivo serbio que combina poesía, diseño gráfico, y activismo social, creando performances que desafían lo cotidiano.",
+        quote: "El arte que grita en silencio."
+    },
+    {
+        category: "Filosofía digital",
+        title: "The Glass Bead Game",
+        url: "https://glassbead.org/",
+        description: "Una revista y proyecto filosófico que explora la intersección de la ciencia, el arte y la filosofía. Un juego intelectual de conexiones.",
+        quote: "Todo está conectado en el vasto juego del conocimiento."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
