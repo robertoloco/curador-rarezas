@@ -16,21 +16,26 @@ jobs:
     steps:
       # 1. Checkout del código
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
+          # Necesario para poder pushear de vuelta con el token del workflow
           token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+          fetch-depth: 0
       
       # 2. Configura Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
       
       # 3. Instala dependencias
       - name: Install dependencies
         run: |
-          npm install openai
-          npm install @getbrevo/brevo
+          # No usamos `npm ci` porque el repo no incluye package-lock.json.
+          # `npm install` puede generar package-lock.json (lo versionamos para estabilidad).
+          npm install --no-audit --no-fund
       
       # 4. Actualiza base de datos con IA
       - name: Update database with AI
@@ -43,8 +48,14 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add script.js
-          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Actualización diaria: nuevos descubrimientos"
+
+          # Stage SOLO lo que este workflow puede generar/modificar
+          git add script.js package-lock.json scripts/email-history.json scripts/daily-selection.json 2>/dev/null || true
+
+          # Si no hay nada staged, no hacemos commit (y no fallamos)
+          git diff --staged --quiet || git commit -m "🤖 Actualización diaria: nuevos descubrimientos [skip ci]"
+
+          # Si no hay commit, push no hace nada; si hay commit, sube cambios
           git push
       
       # 6. Envía newsletter diario
