@@ -1566,6 +1566,76 @@ async function fetchFromHackerNews() {
         url: "http://www.plunderphonics.com/",
         description: "John Oswald desafía la música convencional al remezclar y reorganizar sonidos existentes en nuevas composiciones. Este acto de 'plunderphonics' cuestiona los límites de la autoría musical.",
         quote: "La música es un río en constante remolino."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Zoom Quilt",
+        url: "https://zoomquilt.org/",
+        description: "Un viaje visual interminable que te sumerge a través de un mundo de imágenes infinitamente conectadas. El arte va más allá de lo convencional, empujándote hacia un abismo onírico de creatividad y detalles.",
+        quote: "¿Y si el infinito fuera una serie de sueños interconectados?"
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Jan von Holleben",
+        url: "https://www.janvonholleben.com/",
+        description: "Fotógrafo que transforma la cotidianidad en obras fantásticas. Su enfoque único desafía la percepción del espacio y el tiempo, creando universos paralelos a partir de objetos comunes.",
+        quote: "La magia está donde menos lo esperas, a menudo bajo tus pies."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "The Quiet Place Project",
+        url: "http://thequietplaceproject.com/",
+        description: "Un refugio digital para escapar del ruido constante de la vida moderna. Ofrece una serie de experiencias interactivas que invitan a la introspección y a la serenidad.",
+        quote: "A veces, el sonido más potente es el silencio."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Pippo",
+        url: "https://pippo.phetch.co/",
+        description: "Un juego de palabras visuales, donde tu objetivo es identificar lo incorrecto en imágenes cotidianas. Es un test de observación que te hará dudar de la realidad tal como la conoces.",
+        quote: "Lo extraño se oculta a plena vista."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "Balloon HQ",
+        url: "http://balloonhq.com/",
+        description: "Un portal inesperado a la comunidad global de arte y escultura con globos. Más que entretenimiento infantil, es un mundo vibrante de creatividad e innovación.",
+        quote: "La ligereza del arte solo es superada por la imaginación que lo infla."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Glitche",
+        url: "https://glitche.com/",
+        description: "Un experimento visual que permite crear arte glitch a partir de tus fotos. Una ruptura con la perfección digital que te invita a explorar la belleza de la imperfección.",
+        quote: "A veces, el error es el camino más directo hacia lo hermoso."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "Museum of Endangered Sounds",
+        url: "http://savethesounds.info/",
+        description: "Una cápsula del tiempo digital que conserva los sonidos emblemáticos de tecnologías obsoletas. Un recordatorio auditivo de cómo el progreso transforma nuestro paisaje cotidiano.",
+        quote: "El eco del pasado resuena en el futuro."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "Things We Forget",
+        url: "https://thingsweforget.blogspot.com/",
+        description: "Un blog con notas adhesivas ilustradas que se centran en frases motivadoras y pensamientos introspectivos. Pequeños recordatorios de humanidad dejados al azar en el mundo.",
+        quote: "Las palabras que olvidamos dicen más de lo que recordamos."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Museum of Jurassic Technology",
+        url: "http://www.mjt.org/",
+        description: "Un museo que desafía las expectativas de lo que es o debería ser un museo, exhibiendo artefactos inesperados que invitan a reflexionar sobre la memoria, el conocimiento y la percepción.",
+        quote: "En el cruce entre lo real y lo imaginado, florece la maravilla."
+    },
+    {
+        category: "Música experimental",
+        title: "Disquiet Junto",
+        url: "https://disquiet.com/",
+        description: "Comunidad de músicos que participan en desafíos semanales para crear música experimental. Una colmena de creatividad sónica que explora los límites del sonido en la era digital.",
+        quote: "Cada nota es un paso hacia lo desconocido."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
