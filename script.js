@@ -1706,6 +1706,76 @@ async function fetchFromHackerNews() {
         url: "https://theanarchistlibrary.org/library/donna-haraway-a-cyborg-manifesto",
         description: "Un ensayo seminal de Donna Haraway que desafía las definiciones tradicionales de naturaleza, cultura y tecnología. Propone una visión radical del futuro posthumano a través del lente del ciborg.",
         quote: "El futuro será híbrido o no será."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Staggering Beauty",
+        url: "http://www.staggeringbeauty.com/",
+        description: "Un gusano negro se retuerce frenéticamente al movimiento de tu cursor, creando un espectáculo visual que desafía el sentido común. Es una experiencia que combina simpleza y caos en un rincón digital.",
+        quote: "A veces, la inutilidad es la más pura forma de diversión."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Cameron's World",
+        url: "http://www.cameronsworld.net/",
+        description: "Un homenaje vibrante al internet de los años 90, donde los gráficos pixelados y los colores llamativos te trasladan a una era de ingenuidad digital. Cada clic es un viaje a la nostalgia más ruidosa.",
+        quote: "El pasado digital nunca estuvo tan vivo."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "We Feel Fine",
+        url: "http://www.wefeelfine.org/",
+        description: "Un proyecto que recopila y visualiza las emociones de millones de personas a través de sus blogs. Una obra de arte colectiva que transforma el sentir humano en colores y formas, revelando patrones de la humanidad.",
+        quote: "Más que palabras, somos emociones compartidas."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Dinosaur Polo Club's Mini Metro",
+        url: "https://dinopoloclub.com/minimetro/",
+        description: "Un juego de simulación de metro minimalista que desafía la lógica y la paciencia mientras intentas mantener una ciudad funcional. Una representación perfecta de cómo el caos y el orden pueden coexistir de manera entretenida.",
+        quote: "Construir un sistema perfecto, un ciclo interminable."
+    },
+    {
+        category: "Música experimental",
+        title: "Patatap",
+        url: "https://www.patatap.com/",
+        description: "Una herramienta interactiva que transforma las pulsaciones de teclas en música y arte visual. Cada letra desencadena un sonido único, creando una sinfonía de caos y belleza sincronizada.",
+        quote: "La música del teclado, el arte del instante."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Embroidered Digital Commons",
+        url: "https://www.hq.uis.no/~signe/idngr_dev/EDC/",
+        description: "Signe Lidén borda términos tecnológicos en tela, evocando una era en que las palabras eran rarezas táctiles. Una mezcla de lo antiguo y lo moderno que invita a reflexionar sobre el significado de lo digital.",
+        quote: "Tejer conceptos como quien cose un nuevo lenguaje."
+    },
+    {
+        category: "Filosofía digital",
+        title: "The Glass Bead Game",
+        url: "http://www.holosfind.com/glassbeadgame/",
+        description: "Un espacio digital donde las ideas se entrelazan en complejas redes. Inspirado por la obra de Hermann Hesse, es un juego mental que explora el infinito potencial de la mente humana.",
+        quote: "En el juego de las ideas, la mente es el tablero."
+    },
+    {
+        category: "Subculturas",
+        title: "MyNoise",
+        url: "https://mynoise.net/",
+        description: "Un sitio que ofrece generadores de ruido ajustables para crear paisajes sonoros personalizables. Es un refugio acústico para aquellos que buscan paz o concentración en un mundo saturado de sonido.",
+        quote: "El silencio también tiene su propio sonido."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "This is sand",
+        url: "https://thisissand.com/",
+        description: "Convierte tu pantalla en un lienzo digital de arena. A través del simple acto de dejar caer granos de colores, se invita a la contemplación y la creación en un mundo donde la simplicidad es revolucionaria.",
+        quote: "La eternidad se mide en granos de arena."
+    },
+    {
+        category: "Experimentos sociales",
+        title: "The Quiet Place Project",
+        url: "http://thequietplaceproject.com/",
+        description: "Un espacio virtual diseñado para desconectar del ruido digital, invitando al visitante a un refugio de tranquilidad y meditación sencilla. Aquí, el silencio es un lujo indulgente.",
+        quote: "Desconectar para conectarse con uno mismo."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
