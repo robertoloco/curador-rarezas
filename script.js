@@ -1846,6 +1846,76 @@ async function fetchFromHackerNews() {
         url: "https://disquiet.com/",
         description: "Una comunidad sonora en línea dedicada a la música experimental, que cada semana propone un desafío creativo para explorar nuevos horizontes musicales.",
         quote: "El sonido es una exploración infinita."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "The Museum of Endangered Sounds",
+        url: "http://savethesounds.info/",
+        description: "Un museo digital dedicado a preservar los sonidos que podrían perderse en la era digital, como el zumbido del dial-up o el clic de un disquete. Un viaje sonoro nostálgico hacia tiempos más simples.",
+        quote: "El silencio no es siempre de oro; a veces, es un sonido olvidado."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Jennet Thomas",
+        url: "http://www.jennetthomas.co.uk/",
+        description: "Artista multimedia que desafía los límites del videoarte con narrativas surrealistas e imágenes de otro mundo. Su trabajo explora la frontera entre lo absurdo y lo inquietante.",
+        quote: "En lo extraño habita la verdad."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "Weird Box",
+        url: "http://weirdbox.tv/",
+        description: "Una experiencia interactiva que convierte tu perfil de Instagram en una caja extraña llena de sorpresas visuales. Un juego inquietante entre lo privado y lo público.",
+        quote: "La privacidad es la nueva rareza."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Nothing To Hide",
+        url: "http://nothing-to-hide.cc/",
+        description: "Un juego de sigilo donde ser visto es la clave. En un mundo donde la privacidad no existe, el jugador debe maniobrar entre cámaras siempre vigilantes.",
+        quote: "En un mundo de observadores, ¿qué significa realmente ser libre?"
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "Deep Dream Generator",
+        url: "https://deepdreamgenerator.com/",
+        description: "Una comunidad de artistas digitales que usan la inteligencia artificial para transformar imágenes normales en visiones surreales y psicodélicas. Un lugar donde la IA y el arte se encuentran.",
+        quote: "Los sueños digitales pueden ser más vivos que la realidad."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Beeple's Everydays",
+        url: "https://www.beeple-crap.com/everydays",
+        description: "Elambiente digital de Beeple ofrece una estética de ciencia ficción distópica todos los días, explorando los límites de nuestra existencia tecnológica.",
+        quote: "Cada día trae un universo nuevo."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "The Simulation Argument",
+        url: "http://www.simulation-argument.com/",
+        description: "Un sitio dedicado a explorar la teoría de que vivimos dentro de una simulación computacional, cuestionando la naturaleza de la realidad de manera filosófica y científica.",
+        quote: "¿Y si toda la existencia fuese solo un código bien escrito?"
+    },
+    {
+        category: "Blogs olvidados",
+        title: "The Dreaming",
+        url: "http://thedreaming.com/",
+        description: "Un blog arcaico que recopila experiencias personales y anécdotas de sueños vívidos, demostrando que los mundos oníricos pueden ser tan reales como los despiertos.",
+        quote: "En los sueños, recordamos lo que en la vigilia olvidamos."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Quiet Walk",
+        url: "https://www.thequietwalk.com/",
+        description: "Una performance en línea que invita a los visitantes a dar un paseo virtual mientras meditan sobre sonidos y textos calmantes. Un respiro digital en un mundo ruidoso.",
+        quote: "La paz es solo una caminata silenciosa de distancia."
+    },
+    {
+        category: "Música experimental",
+        title: "Plunderphonics",
+        url: "http://www.plunderphonics.com/",
+        description: "John Oswald explora el arte de deconstruir y reconstruir música popular, creando una experiencia auditiva que desafía las convenciones de la autoría musical.",
+        quote: "La música no es posesión; es posibilidad."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
