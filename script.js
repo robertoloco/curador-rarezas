@@ -1916,6 +1916,76 @@ async function fetchFromHackerNews() {
         url: "http://www.plunderphonics.com/",
         description: "John Oswald explora el arte de deconstruir y reconstruir música popular, creando una experiencia auditiva que desafía las convenciones de la autoría musical.",
         quote: "La música no es posesión; es posibilidad."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Procrastinator's Clock",
+        url: "http://procrastinator-mind.com/clock/",
+        description: "Un reloj que nunca está seguro si va a tiempo o no, diseñado para aquellos que deseen escapar de la dictadura de la puntualidad. Su tiempo es relativo y variable.",
+        quote: "La hora no es más que una ilusión colectiva."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Heather Wilcoxon",
+        url: "https://www.heatherwilcoxon.com",
+        description: "Artista outsider que crea mundos fantásticos y perturbadores con sus pinturas, llenas de personajes grotescos y colores vibrantes, explorando la locura y el caos.",
+        quote: "El arte no tiene sentido si no sacude el alma."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "Aphantasia Project",
+        url: "https://aphantasia.com/",
+        description: "Explora el fenómeno de la aphantasia, la incapacidad de crear imágenes mentales, a través de historias y entrevistas con aquellos que experimentan este curioso estado mental.",
+        quote: "El vacío mental puede ser una fuente inagotable de creatividad."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Eggnog.io",
+        url: "https://eggnog.io/",
+        description: "Un alocado juego multijugador en línea donde todos son guerreros de neón compitiendo en un combate frenético y sin sentido donde solo el más rápido sobrevive.",
+        quote: "En el caos, solo el absurdo tiene sentido."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "Slab City",
+        url: "https://www.slabcity.org/",
+        description: "Conocida como \"la última ciudad libre de América\", Slab City es un refugio para artistas, vagabundos y nómadas que abrazan una vida al margen de la sociedad convencional.",
+        quote: "La libertad se encuentra al final del camino polvoriento."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Glitch Artists Collective",
+        url: "https://www.facebook.com/glitchartistscollective/",
+        description: "Una comunidad vibrante y caótica donde los artistas comparten sus obras de glitch art, abrazando errores digitales como una forma de expresión estética.",
+        quote: "El error es la nueva perfección."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "The Last Message Received",
+        url: "http://thelastmessagereceived.tumblr.com/",
+        description: "Un blog desgarrador que compila las últimas palabras enviadas a las personas antes de relaciones rotas, muertes o separaciones definitivas, reflejando la fragilidad humana.",
+        quote: "En cada adiós, hay una eternidad."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "Fragments of Past Curiosity",
+        url: "http://fragmentsofpastcuriosity.blogspot.com/",
+        description: "Un viaje nostálgico a través de pequeñas curiosidades del pasado, donde se exploran objetos obsoletos que desafían la lógica contemporánea.",
+        quote: "El pasado siempre nos susurra secretos a través de sus vestigios."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Quiet Volume",
+        url: "https://www.thequietvolume.com/",
+        description: "Una obra teatral única que se desarrolla silenciosamente entre dos personas en una biblioteca, explorando el acto de leer como una experiencia compartida e íntima.",
+        quote: "El silencio también susurra historias."
+    },
+    {
+        category: "Experimentos sociales",
+        title: "Grocery Store Wars",
+        url: "http://www.storewars.org/noflash/",
+        description: "Una parodia del universo de Star Wars donde los productos orgánicos luchan contra los alimentos procesados, invitando a reflexionar sobre el consumo y la producción masiva.",
+        quote: "La fuerza orgánica estará contigo, siempre."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
