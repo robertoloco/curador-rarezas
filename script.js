@@ -1986,6 +1986,76 @@ async function fetchFromHackerNews() {
         url: "http://www.storewars.org/noflash/",
         description: "Una parodia del universo de Star Wars donde los productos orgánicos luchan contra los alimentos procesados, invitando a reflexionar sobre el consumo y la producción masiva.",
         quote: "La fuerza orgánica estará contigo, siempre."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Zoom Quilt",
+        url: "http://zoomquilt.org/",
+        description: "Un viaje infinito y alucinante a través de un mundo de ilustraciones que se conectan sin fin. Es una ventana al arte colaborativo y una experiencia meditativa.",
+        quote: "El infinito cabe en un parpadeo, solo hay que saber dónde mirar."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Ryoji Ikeda",
+        url: "https://www.ryojiikeda.com/",
+        description: "Un artista japonés que explora el universo digital a través del sonido y la luz. Sus instalaciones y performances son una sinfonía de datos y una celebración de lo imperceptible.",
+        quote: "Donde los datos se convierten en poesía."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "The Quiet Place Project",
+        url: "http://thequietplaceproject.com/thequietplace",
+        description: "Este lugar en la web te invita a detenerte, respirar y encontrar paz. Es un rincón digital que te recuerda la importancia de desconectar en un mundo siempre activo.",
+        quote: "A veces, el silencio habla más fuerte que cualquier ruido."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Neko Atsume: Kitty Collector",
+        url: "https://www.nekoatsume.com/",
+        description: "Un juego simple y encantador donde coleccionas gatos que visitan tu patio virtual. Es absurdo, sin prisas, y no tiene un objetivo más que disfrutar de la compañía felina.",
+        quote: "La felicidad también cabe en un par de bigotes digitales."
+    },
+    {
+        category: "Mundos 'under', subculturas",
+        title: "Post Apocalyptic Costuming",
+        url: "https://postapocalypticcostuming.com/",
+        description: "Una comunidad dedicada a crear e intercambiar ideas sobre vestuario inspirado en mundos post-apocalípticos. Es un escaparate del talento y la creatividad que florece en la adversidad ficticia.",
+        quote: "Vestirse es reimaginar la supervivencia."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Cybernetics Library",
+        url: "https://cybernetics.social/",
+        description: "Una biblioteca digital dedicada a la estética y la teoría de la cibernética. Un lugar donde el futuro y el pasado se cruzan en una danza de ideas y posibilidades.",
+        quote: "La cibernética es el puente entre el hombre y la máquina."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "Existential Comics",
+        url: "https://existentialcomics.com/",
+        description: "Este cómic semanal explora las filosofías complejas a través del humor. Con viñetas que hacen reír y pensar, te desafía a cuestionar lo que crees saber.",
+        quote: "Cuando la risa se vuelve un acto de rebeldía intelectual."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "The Obsolete Weblog",
+        url: "http://obsoleteweblog.blogspot.com/",
+        description: "Un rincón nostálgico del internet que documenta tecnologías y tendencias que han quedado en el camino. Es un epitafio digital para lo que alguna vez fue la vanguardia.",
+        quote: "Recordando lo que el tiempo y el progreso se llevaron."
+    },
+    {
+        category: "Música experimental",
+        title: "The 365 Days Project",
+        url: "http://365project.org/",
+        description: "Un archivo de música rara y experimental recolectada a lo largo de un año. Es un manantial de sonidos peculiares que desafía los límites de lo que llamamos música.",
+        quote: "El sonido es el susurro del universo en nuestros oídos."
+    },
+    {
+        category: "Filosofía digital",
+        title: "Digital Philosophy",
+        url: "https://www.digitalphilosophy.org/",
+        description: "Un espacio donde se discuten las implicaciones filosóficas de la tecnología y el mundo digital. Es un foro de ideas para quienes cuestionan y reimaginan el futuro.",
+        quote: "Pensar digitalmente es pensar en el entramado de nuestras realidades conectadas."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
