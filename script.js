@@ -2126,6 +2126,76 @@ async function fetchFromHackerNews() {
         url: "https://digitalphilosophy.org/",
         description: "Una exploración filosófica del impacto del entorno digital en nuestra percepción de la realidad. Ofrece ensayos y reflexiones profundas sobre el cruce entre tecnología y existencialismo.",
         quote: "In bytes and pixels, we seek meaning beyond the virtual."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Zoom Quilt",
+        url: "https://zoomquilt.org/",
+        description: "Un tapiz animado de imágenes que se hunden infinitamente en un mundo onírico. Explora un universo surrealista que parece no tener fin a medida que te sumerges en la pantalla.",
+        quote: "En el mundo de los sueños, siempre hay más profundo a dónde ir."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Annie Rauwerda",
+        url: "https://depthsofwikipedia.com/",
+        description: "Una exploración de las páginas más inusuales y peculiares de Wikipedia. Annie Rauwerda curatea este espacio con un toque de humor e ingenio, mostrando el lado excéntrico del conocimiento humano.",
+        quote: "En el caos de la información, hay una alegría inigualable en lo extraño."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Kill Screen",
+        url: "https://killscreengames.com/",
+        description: "Experiencias de juego que desafían las normas tradicionales, llevándote a espacios donde la lógica convencional no siempre aplica. Estos juegos empujan los límites de lo que se espera de la interactividad.",
+        quote: "Jugar es descubrir nuevos mundos donde las reglas son solo sugerencias."
+    },
+    {
+        category: "Experimentos sociales",
+        title: "Unfamiliar Places",
+        url: "https://unfamiliar.space/",
+        description: "Un proyecto colaborativo que presenta historias y fotografías de lugares extraños y desconocidos de todo el mundo. Un llamado a la curiosidad y al asombro por lo que se encuentra más allá de nuestra vista cotidiana.",
+        quote: "A veces, lo más extraordinario está oculto en lo ordinario."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "Lociol Folios",
+        url: "https://lociol.com/folios/",
+        description: "Un archivo digital de pensamientos, imágenes y sonidos que ofrecen un vistazo al flujo de conciencia de su creador. Este proyecto invita al espectador a reflexionar sobre la conexión entre arte y pensamiento.",
+        quote: "El arte no solo se mira, se escucha en el silencio de una mente en creación."
+    },
+    {
+        category: "Música experimental",
+        title: "Radiooooo",
+        url: "https://radiooooo.com/",
+        description: "Una máquina del tiempo musical que te permite explorar canciones de diferentes décadas y países. Esta radio interactiva ofrece una experiencia auditiva única, sorprendiendo con sonidos del pasado global.",
+        quote: "Cada canción es un viaje a una era olvidada."
+    },
+    {
+        category: "Filosofía digital",
+        title: "The Society Pages",
+        url: "https://thesocietypages.org/sociologylens/",
+        description: "Un blog que reflexiona sobre la intersección de la tecnología, la cultura y la sociedad. Combina el pensamiento sociológico con un análisis crítico de la era digital.",
+        quote: "La sociedad es un espejo pixelado, reflejando nuestras conexiones e inquietudes."
+    },
+    {
+        category: "Estéticas raras",
+        title: "Trash Palace",
+        url: "https://trashpalace.com/",
+        description: "Una celebración del 'trash aesthetic' en todas sus formas. Este sitio reúne arte, música y cultura que desafían la noción de la belleza tradicional, mostrando la vitalidad en lo que se considera 'basura'.",
+        quote: "En lo desechado, encontramos el alma de la resistencia creativa."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "The Distraction Society",
+        url: "https://distractionsociety.wordpress.com/",
+        description: "Un blog que ofrece pensamientos dispersos y ensayos breves sobre la distracción como fenómeno sociocultural. Aquí se celebra la desconexión intencional y la belleza de perderse.",
+        quote: "A veces, perder el hilo es encontrar un nuevo camino."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Institute for New Feeling",
+        url: "https://www.institutefornewfeeling.com/",
+        description: "Un colectivo de artistas que diseñan nuevos tratamientos para el cuerpo y la mente, explorando las intersecciones de la tecnología y el bienestar en performances inmersivas e interactivas.",
+        quote: "Sentir es el primer paso hacia nuevos horizontes mentales."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
