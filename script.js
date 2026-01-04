@@ -2196,6 +2196,76 @@ async function fetchFromHackerNews() {
         url: "https://www.institutefornewfeeling.com/",
         description: "Un colectivo de artistas que diseñan nuevos tratamientos para el cuerpo y la mente, explorando las intersecciones de la tecnología y el bienestar en performances inmersivas e interactivas.",
         quote: "Sentir es el primer paso hacia nuevos horizontes mentales."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Falling Sand Game",
+        url: "http://fallingsandgame.com/sand/",
+        description: "Un sitio minimalista que permite jugar con elementos como arena, agua, fuego y sal para crear reacciones fascinantes y observar cómo interactúan en un mundo digital.",
+        quote: "A veces, la belleza está en dejar que los elementos sigan su curso natural."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Carlos Garaicoa",
+        url: "https://www.garaicoa.com/",
+        description: "Carlos Garaicoa explora la arquitectura y el urbanismo como metáforas en sus instalaciones y obras gráficas, creando un puente entre lo imaginado y lo real.",
+        quote: "Las ciudades son lienzos en constante transformación."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "ASMR Soprano",
+        url: "https://www.asmrsoprano.com/",
+        description: "Una soprano que combina la técnica vocal clásica con sonidos ASMR, creando una experiencia auditiva única y relajante que desafía los límites de la música tradicional.",
+        quote: "El arte de susurrar puede ser tan poderoso como el de cantar."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Paunch",
+        url: "https://paunch.com/",
+        description: "Un juego multijugador donde los jugadores controlan a luchadores en ropa interior compitiendo en peleas absurdas y cómicamente brutales.",
+        quote: "La seriedad nunca fue el fuerte de aquellos dispuestos a dejar caer sus pantalones."
+    },
+    {
+        category: "Mundos 'under', subculturas",
+        title: "Cyberdelia",
+        url: "https://www.cyberdelia.com/",
+        description: "Un mundo subterráneo de cyberpunk y estética retrofuturista que celebra la convergencia de tecnología y psicodelia a través de arte, música y literatura.",
+        quote: "En el cruce de chips y trances, florece la cyberdelia."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Glitch Art Collective",
+        url: "https://www.glitchartcollective.com/",
+        description: "Artistas que se unen para celebrar el error visual y la estética glitch, transformando fallos digitales en arte visualmente impactante.",
+        quote: "Encontramos belleza en lo que el mundo digital considera fallos."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "The Quiet Place Project",
+        url: "http://thequietplaceproject.com/",
+        description: "Un rincón digital diseñado para ayudar a la gente a desconectarse y desestresarse, ofreciendo un espacio donde el silencio y la reflexión son los verdaderos protagonistas.",
+        quote: "En el silencio, encontramos nuestra verdadera voz."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "PostSecret",
+        url: "http://postsecret.blogspot.com/",
+        description: "Un blog donde personas de todo el mundo envían postales anónimas con sus secretos más íntimos, creando una colección conmovedora y a veces inquietante de confesiones humanas.",
+        quote: "Todos tienen un secreto que contar; a veces solo necesitas la plataforma correcta."
+    },
+    {
+        category: "Música experimental",
+        title: "The Standing Wave Orchestra",
+        url: "http://standingwaveorchestra.com/",
+        description: "Un colectivo musical que utiliza ondas estacionarias generadas electrónicamente para crear composiciones únicas que desafían las normas musicales convencionales.",
+        quote: "En las ondas, la música encuentra su forma más eterna."
+    },
+    {
+        category: "Filosofía digital",
+        title: "Digital Natives",
+        url: "http://digital-natives.org/",
+        description: "Un ensayo colectivo que examina cómo la generación de nativos digitales está redefiniendo identidad, privacidad y comunidad en un mundo cada vez más conectado.",
+        quote: "Nacidos con un dispositivo en mano, creados para navegar lo digital y lo humano."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
