@@ -2266,6 +2266,76 @@ async function fetchFromHackerNews() {
         url: "http://digital-natives.org/",
         description: "Un ensayo colectivo que examina cómo la generación de nativos digitales está redefiniendo identidad, privacidad y comunidad en un mundo cada vez más conectado.",
         quote: "Nacidos con un dispositivo en mano, creados para navegar lo digital y lo humano."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Zoom Quilt",
+        url: "http://zoomquilt.org/",
+        description: "Un bucle visual interminable que te sumerge en un paisaje surrealista y cambiante. Es una obra colaborativa que desafía la percepción del infinito.",
+        quote: "El viaje nunca termina, solo cambia de perspectiva."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Ellie Pritts",
+        url: "http://elliepritts.com/",
+        description: "Artista visual que mezcla la tecnología y el arte tradicional, creando piezas que vibran en un encantador glitch visual. Sus obras son un caleidoscopio de color y distorsión.",
+        quote: "El caos puede ser el lienzo perfecto para la belleza."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "This Person Does Not Exist",
+        url: "https://thispersondoesnotexist.com/",
+        description: "Una página que genera rostros realistas utilizando inteligencia artificial, desafiando la noción de identidad y autenticidad en la era digital.",
+        quote: "La realidad es un espejismo creado por algoritmos."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "NRAnt",
+        url: "http://nra.nteract.io/",
+        description: "Un juego interactivo donde controlas una colonia de hormigas a través de un terminal de comandos. Es un ejercicio de estrategia y paciencia en un mundo minimalista.",
+        quote: "La microrregulación es el arte de pensar a lo grande."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "Darknet Diaries",
+        url: "https://darknetdiaries.com/",
+        description: "Un podcast que explora historias del ciberespacio, desde hackers hasta violaciones de privacidad. Sumérgete en las sombras digitales del mundo.",
+        quote: "En las sombras, la luz de la verdad brilla más."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Internet Archaeology",
+        url: "https://internetarchaeology.org/",
+        description: "Un sitio dedicado a preservar la estética y la cultura de la web antigua. Viaja al pasado de internet en un viaje nostálgico y visual.",
+        quote: "El pasado digital es un museo del futuro."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "Unwritten",
+        url: "http://www.unwritten.nyc/",
+        description: "Un provocador proyecto que invita a personas a compartir los mensajes que no se atreven a enviar. Es un vistazo a la comunicación no expresada.",
+        quote: "A veces, lo no dicho es lo que más merece ser escuchado."
+    },
+    {
+        category: "Experimentos sociales",
+        title: "The Quiet Place Project",
+        url: "http://thequietplaceproject.com/",
+        description: "Un refugio digital para escapar del ruido del mundo. Ofrece una experiencia interactiva que promueve la introspección y la calma.",
+        quote: "El silencio es un lienzo donde la mente se dibuja a sí misma."
+    },
+    {
+        category: "Música experimental",
+        title: "Flood of Circle",
+        url: "https://floodofcircle.com/",
+        description: "Banda japonesa que fusiona el rock clásico con una estridente psicodelia moderna. Sus guitarras son un viaje a través de ondas sonoras inesperadas.",
+        quote: "Donde el caos musical florece, allí reside la innovación."
+    },
+    {
+        category: "Filosofía digital",
+        title: "Philosophy Tube",
+        url: "https://www.youtube.com/c/PhilosophyTube",
+        description: "Un canal de YouTube que transforma la filosofía en un arte visual y accesible. Cada video es una reflexión profunda sobre sociedad, política y tecnología.",
+        quote: "La filosofía es el código fuente de nuestros pensamientos."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
