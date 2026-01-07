@@ -2406,6 +2406,76 @@ async function fetchFromHackerNews() {
         url: "http://peoplelikeus.org/",
         description: "Un fascinante proyecto de collage sonoro que recontextualiza fragmentos de música y sonido para crear composiciones que son a la vez nostálgicas y radicalmente nuevas.",
         quote: "El pasado resuena en nuestras creaciones más nuevas."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "Zoomquilt",
+        url: "http://zoomquilt.org/",
+        description: "Un lienzo infinito que te sumerge en un viaje hipnótico y sin fin a través de ilustraciones que se conectan sin solución de continuidad. Una experiencia visual única que desafía la percepción del espacio.",
+        quote: "El arte de perderse en lo interminable."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Yoshitoshi Kanemaki",
+        url: "https://twitter.com/ykanemaki",
+        description: "Escultor japonés cuyas obras tallan en madera la esencia de duplicidad y paradojas humanas. Sus figuras poliédricas revelan la inquietante belleza de la multiplicidad y la incertidumbre.",
+        quote: "Las caras ocultas del alma reveladas en madera."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "We Feel Fine",
+        url: "http://www.wefeelfine.org/",
+        description: "Un proyecto que captura y visualiza emociones humanas a partir de los blogs y redes sociales. Ofrece una experiencia interactiva que muestra el caleidoscopio de sentimientos dispersos por la web.",
+        quote: "Las emociones flotan como datos en el éter digital."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "Neko Atsume: Kitty Collector",
+        url: "http://nekoatsume.com/",
+        description: "Un juego para dispositivos móviles donde el objetivo es simple: atraer y coleccionar gatos. Sin grandes pretensiones, se convierte en una inesperada fuente de alegría felina y tranquilidad cotidiana.",
+        quote: "La vida, a veces, solo requiere un poco de ternura felina."
+    },
+    {
+        category: "Mundos "under", subculturas",
+        title: "Sea-Punk",
+        url: "https://knowyourmeme.com/memes/subcultures/seapunk",
+        description: "Una subcultura digital que mezcla la estética oceánica con la cibercultura. Con tonos azulados y una mezcla de nostalgia noventera, busca crear una identidad en el mar de la era digital.",
+        quote: "Las olas digitales del mar cibernético."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Glitch Art by Rosa Menkman",
+        url: "https://rosa-menkman.blogspot.com/p/glitch-studies.html",
+        description: "Artista pionera en el mundo del glitch art, Menkman explora la belleza en la ruptura digital, revelando cómo los errores y fallos pueden convertirse en un nuevo lenguaje visual.",
+        quote: "Las imperfecciones son el pulso vivo del arte digital."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "A Softer World",
+        url: "http://www.asofterworld.com/",
+        description: "Una tira cómica fotográfica cargada de ironía y poesía oscura. Cada imagen acompaña textos cortos que desnudan la vida, el amor y la improbabilidad de la existencia con mordaz sinceridad.",
+        quote: "A veces, la vida es un susurro en colores desvaídos."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "PostSecret",
+        url: "http://postsecret.com/",
+        description: "Un blog invitando a personas de todo el mundo a compartir sus secretos anónimamente en postales decoradas. Una compasiva y humana colección de confesiones que iluminan la condición humana.",
+        quote: "Entre líneas y sellos, los secretos encuentran voz."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Museum of Broken Relationships",
+        url: "https://brokenships.com/",
+        description: "Un museo dedicado a objetos personales que representan relaciones fallidas. Cada pieza cuenta una historia de amor y pérdida, recordándonos que todos compartimos la experiencia del desamor.",
+        quote: "Las reliquias de amores pasados cuentan historias universales."
+    },
+    {
+        category: "Música experimental",
+        title: "Musical Mind Control",
+        url: "https://soundcloud.com/musicalmindcontrol",
+        description: "Un proyecto sonoro que explora el uso de ondas cerebrales y música para crear experiencias auditivas únicas. Un viaje que promete alterar la percepción y conectar con lo más profundo del ser.",
+        quote: "Cuando el sonido se convierte en un puente al subconsciente."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
