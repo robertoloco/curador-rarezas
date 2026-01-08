@@ -2476,6 +2476,76 @@ async function fetchFromHackerNews() {
         url: "https://soundcloud.com/musicalmindcontrol",
         description: "Un proyecto sonoro que explora el uso de ondas cerebrales y música para crear experiencias auditivas únicas. Un viaje que promete alterar la percepción y conectar con lo más profundo del ser.",
         quote: "Cuando el sonido se convierte en un puente al subconsciente."
+    },
+    {
+        category: "Webs extrañas o inútiles",
+        title: "BingBongPage",
+        url: "https://www.bingbongpage.com/",
+        description: "Una puerta a la absoluta futilidad, esta página simula un universo de coloridos estallidos sin propósito. Es como si el internet decidiera hacerse una introspección y concluyera que solo quiere divertirse.",
+        quote: "La belleza de la inutilidad: donde todo es nada y nada es todo."
+    },
+    {
+        category: "Artistas desconocidos o marginales",
+        title: "Alicja Rogalska",
+        url: "http://www.alicjarogalska.com/",
+        description: "Artista multidisciplinaria que explora los límites de la sociedad a través de performances que invitan a la reflexión sobre lo normal y lo extraordinario. Sus trabajos son como espejos que distorsionan la realidad cotidiana para revelar lo invisible.",
+        quote: "La realidad está siempre sujeto a negociación."
+    },
+    {
+        category: "Proyectos raros y experimentales",
+        title: "Fortune Cookie Generator",
+        url: "http://www.fortunecookiemessage.com/",
+        description: "Un generador que te ofrece inacabables dosis de mini profecías y sugerencias de autoayuda absurdas. Como si las galletas de la suerte decidieran rebelarse de su monotonía y optaran por el camino del surrealismo.",
+        quote: "El futuro es como una galleta: crujiente e indescifrable."
+    },
+    {
+        category: "Juegos absurdos o interactivos",
+        title: "DON'T EAT PETS",
+        url: "https://dont-eat-pets.itch.io/dont-eat-pets",
+        description: "Un juego donde la moralidad se invierte y la supervivencia depende de decisiones absurdas y dilemas éticos bizarros. Un comentario hilarante sobre el comportamiento humano, en un mundo donde la lógica no tiene lugar.",
+        quote: "En el caos del orden, los dilemas éticos se vuelven un banquete."
+    },
+    {
+        category: "Mundos 'under', subculturas",
+        title: "The Old School Revival Blog",
+        url: "https://theosr.blogspot.com/",
+        description: "Un blog dedicado al resurgimiento de los juegos de rol al estilo de los años 70 y 80, donde los límites de la imaginación son las únicas reglas. Un refugio para aquellos que buscan experiencias narrativas crudas y sin filtros.",
+        quote: "La imaginación es el único dado que necesitas."
+    },
+    {
+        category: "Estéticas raras (net.art, glitch, vaporwave)",
+        title: "Glitch Artist Collective",
+        url: "https://www.glitchartistcollective.com/",
+        description: "Un colectivo dedicado a explorar los errores digitales como arte, revelando la accidental belleza oculta en el caos tecnológico. Aquí, los fallos son celebrados como portales a un nuevo tipo de estética.",
+        quote: "El arte se encuentra en la imperfección de la máquina."
+    },
+    {
+        category: "Ideas provocadoras",
+        title: "The Museum of Conceptual Art",
+        url: "https://www.museumofconceptualart.com/",
+        description: "Un espacio virtual donde las ideas desafían a las formas tradicionales de arte, proponiendo conceptos que, aunque intangibles, impactan profundamente al espectador. Es un juego mental donde cada visita redefine lo que significa el arte.",
+        quote: "La idea es el arte final."
+    },
+    {
+        category: "Blogs olvidados",
+        title: "The Temple of the Exploding Head",
+        url: "http://templeofexplodinghead.blogspot.com/",
+        description: "Un blog que, cual cápsula del tiempo, captura la esencia de la internet pasada, con ensayos que van desde lo sublime hasta lo ridículo. Un recordatorio de la era dorada de los blogs, donde las explosiones mentales eran moneda corriente.",
+        quote: "Explosiones mentales: el arte de pensar fuera de la caja."
+    },
+    {
+        category: "Performances o exposiciones raras",
+        title: "The Institute for New Feeling",
+        url: "http://www.institutefornewfeeling.com/",
+        description: "Un colectivo de artistas que ofrece tratamientos imaginarios para los malestares contemporáneos, subvirtiendo las expectativas de sanación con poesía y humor. Sus 'remedios' nos invitan a cuestionar la manera en que percibimos el bienestar.",
+        quote: "La cura es una sensación en constante cambio."
+    },
+    {
+        category: "Música experimental",
+        title: "The Quietus Mixes",
+        url: "https://thequietus.com/sections/mix",
+        description: "Una colección de mixtapes que desafía los géneros musicales, explorando nuevos territorios sónicos y ofreciendo una experiencia auditiva que es tanto un reto como un deleite. Aquí, la música se convierte en un paisaje a explorar.",
+        quote: "El sonido es un universo sin fronteras."
     }
 
 // Para usar APIs reales, reemplaza getRandomDiscoveries() con:
